@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<turing-machine>
+    <machine-states>
+        <state id="0" name="0" x="-5003.04" y="-5079.57" type="initial"/>
+        <state id="3" name="2" x="-4518.7" y="-5079.57" type="normal"/>
+        <state id="2" name="4" x="-5006.52" y="-4698.7" type="final"/>
+        <state id="1" name="1" x="-4723.04" y="-5170" type="normal"/>
+        <state id="4" name="3" x="-4965.65" y="-4889.13" type="normal"/>
+    </machine-states>
+    <state-transitions>
+        <transition from="0" to="1" x="-4837.39" y="-5096.09">
+            <function read="a" write="A" move="right"/>
+        </transition>
+        <transition from="0" to="0" x="-4961.3" y="-5193.48">
+            <function read="#" write="#" move="right"/>
+        </transition>
+        <transition from="0" to="4" x="-4955.65" y="-4949.13">
+            <function read="B" write="B" move="right"/>
+        </transition>
+        <transition from="4" to="4" x="-4795.65" y="-4929.13">
+            <function read="B" write="B" move="right"/>
+        </transition>
+        <transition from="4" to="2" x="-4958.7" y="-4756.96">
+            <function read="#" write="#" move="left"/>
+        </transition>
+        <transition from="0" to="2" x="-5106.96" y="-4812.61">
+            <function read="#" write="#" move="right"/>
+        </transition>
+        <transition from="1" to="1" x="-4703.91" y="-5274.35">
+            <function read="a" write="a" move="right"/>
+            <function read="B" write="B" move="right"/>
+        </transition>
+        <transition from="1" to="3" x="-4606.96" y="-5102.17">
+            <function read="b" write="B" move="left"/>
+        </transition>
+        <transition from="3" to="3" x="-4331.74" y="-5118.7">
+            <function read="a" write="a" move="left"/>
+            <function read="B" write="B" move="left"/>
+        </transition>
+        <transition from="3" to="0" x="-4718.7" y="-5047.39">
+            <function read="A" write="A" move="right"/>
+        </transition>
+    </state-transitions>
+</turing-machine>

@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/cursor_arrow.png</file>
+        <file>styler.css</file>
+        <file>images/down_arrow.png</file>
+        <file>images/left_arrow.png</file>
+        <file>images/right_arrow.png</file>
+        <file>images/up_arrow.png</file>
+        <file>images/tool-pressed.png</file>
+        <file>images/tool-hover.png</file>
+        <file>images/tool-raised.png</file>
+        <file>images/sb-bg.png</file>
+        <file>images/sb-handler.png</file>
+        <file>images/menu-tab.png</file>
+        <file>images/menu-tab-pressed.png</file>
+        <file>images/new-state.png</file>
+        <file>images/new-transition.png</file>
+        <file>images/reset.png</file>
+        <file>images/tape-write.png</file>
+        <file>images/tape-rewind.png</file>
+        <file>images/tape-erase.png</file>
+        <file>images/next.png</file>
+        <file>images/play.png</file>
+        <file>images/pause.png</file>
+        <file>images/delete-item.png</file>
+        <file>images/save.png</file>
+        <file>images/new.png</file>
+        <file>images/open.png</file>
+        <file>images/close.png</file>
+        <file>images/formalize.png</file>
+        <file>images/export-pdf.png</file>
+        <file>about.html</file>
+    </qresource>
+</RCC>

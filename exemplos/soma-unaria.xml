@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<turing-machine>
+    <machine-states>
+        <state id="4" name="0" x="-4750" y="-4901" type="initial"/>
+        <state id="3" name="1" x="-4573.96" y="-4903.4" type="normal"/>
+        <state id="2" name="3" x="-4408.1" y="-4904.37" type="normal"/>
+        <state id="1" name="4" x="-4569.07" y="-4749.63" type="normal"/>
+        <state id="0" name="5" x="-4750.55" y="-4743.87" type="final"/>
+    </machine-states>
+    <state-transitions>
+        <transition from="4" to="0" x="-4721.34" y="-4785.59">
+            <function read="=" write="=" move="right"/>
+        </transition>
+        <transition from="4" to="4" x="-4720.37" y="-5018.75">
+            <function read="+" write="+" move="right"/>
+        </transition>
+        <transition from="1" to="4" x="-4622.38" y="-4786.87">
+            <function read="X" write="X" move="right"/>
+            <function read="#" write="#" move="right"/>
+        </transition>
+        <transition from="1" to="1" x="-4543.41" y="-4835.65">
+            <comment><![CDATA[Voltamos ao começo procurando pelo último dado processado.]]></comment>
+            <function read="=" write="=" move="left"/>
+            <function read="1" write="1" move="left"/>
+            <function read="+" write="+" move="left"/>
+        </transition>
+        <transition from="2" to="1" x="-4469.49" y="-4781.84">
+            <comment><![CDATA[Concatena o 1]]></comment>
+            <function read="#" write="1" move="left"/>
+        </transition>
+        <transition from="2" to="2" x="-4384.38" y="-5015.52">
+            <comment><![CDATA[Pula todos os 1 para chegar ao final da fita.]]></comment>
+            <function read="1" write="1" move="right"/>
+        </transition>
+        <transition from="3" to="2" x="-4475.12" y="-4873.42">
+            <comment><![CDATA[Encontrou o fim da entrada de dados.]]></comment>
+            <function read="#" write="=" move="right"/>
+            <function read="=" write="=" move="right"/>
+        </transition>
+        <transition from="3" to="3" x="-4549.99" y="-5015.86">
+            <comment><![CDATA[Pule todos os 1 e o sinal + que encontrar, até encontrar o fim da fita ou o simbolo =]]></comment>
+            <function read="1" write="1" move="right"/>
+            <function read="+" write="+" move="right"/>
+        </transition>
+        <transition from="4" to="3" x="-4649" y="-4873">
+            <comment><![CDATA[Se reconhecemos 1, então marcamos com X para saber já o processamos e concatenamos ao fim do resultado.]]></comment>
+            <function read="1" write="X" move="right"/>
+        </transition>
+    </state-transitions>
+</turing-machine>

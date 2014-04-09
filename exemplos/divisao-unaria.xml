@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<turing-machine>
+    <comment><![CDATA[Aceita uma entrada de {1}^x/{1}^y, onde x >= 1 e y >= 1
+Por exemplo:
+1111/11
+O resultado será 11.]]></comment>
+    <machine-states>
+        <state id="6" name="3" x="-4795" y="-5081" type="normal"/>
+        <state id="7" name="2" x="-4839" y="-5214" type="normal"/>
+        <state id="0" name="9" x="-4536" y="-5083" type="final"/>
+        <state id="3" name="6" x="-4685" y="-5209" type="normal"/>
+        <state id="9" name="0" x="-5219" y="-5219" type="initial"/>
+        <state id="8" name="1" x="-4988" y="-5084" type="normal"/>
+        <state id="4" name="5" x="-4995" y="-4925" type="normal"/>
+        <state id="1" name="8" x="-4680" y="-5081" type="normal"/>
+        <state id="5" name="4" x="-4800" y="-4924" type="normal"/>
+        <state id="2" name="7" x="-4545" y="-5208" type="final"/>
+    </machine-states>
+    <state-transitions>
+        <transition from="1" to="0" x="-4582" y="-5051">
+            <function read="#" write="0" move="left"/>
+        </transition>
+        <transition from="3" to="1" x="-4650" y="-5109">
+            <function read="#" write="=" move="right"/>
+        </transition>
+        <transition from="3" to="2" x="-4589" y="-5179">
+            <function read="=" write="=" move="right"/>
+        </transition>
+        <transition from="3" to="3" x="-4658" y="-5304">
+            <function read="0" write="0" move="right"/>
+            <function read="1" write="1" move="right"/>
+            <function read="X" write="1" move="right"/>
+            <function read="/" write="/" move="right"/>
+        </transition>
+        <transition from="7" to="3" x="-4739" y="-5182">
+            <function read="#" write="#" move="right"/>
+        </transition>
+        <transition from="4" to="9" x="-5069.5" y="-5026">
+            <function read="/" write="/" move="left"/>
+        </transition>
+        <transition from="4" to="4" x="-4960" y="-5018">
+            <function read="X" write="1" move="left"/>
+        </transition>
+        <transition from="5" to="4" x="-4857" y="-4897">
+            <function read="=" write="=" move="left"/>
+        </transition>
+        <transition from="5" to="5" x="-4655" y="-4948">
+            <function read="1" write="1" move="left"/>
+        </transition>
+        <transition from="6" to="5" x="-4770" y="-4957">
+            <function read="#" write="1" move="left"/>
+        </transition>
+        <transition from="6" to="6" x="-4767" y="-5188">
+            <function read="1" write="1" move="right"/>
+        </transition>
+        <transition from="8" to="6" x="-4866.5" y="-5051">
+            <function read="#" write="=" move="right"/>
+            <function read="=" write="=" move="right"/>
+        </transition>
+        <transition from="7" to="9" x="-4989.5" y="-5186">
+            <function read="1" write="0" move="right"/>
+        </transition>
+        <transition from="7" to="7" x="-4812" y="-5317">
+            <function read="/" write="/" move="left"/>
+            <function read="0" write="0" move="left"/>
+            <function read="X" write="X" move="left"/>
+        </transition>
+        <transition from="8" to="8" x="-4960" y="-5186">
+            <function read="X" write="X" move="right"/>
+        </transition>
+        <transition from="8" to="7" x="-4893" y="-5109">
+            <function read="1" write="X" move="left"/>
+        </transition>
+        <transition from="9" to="8" x="-5068.5" y="-5113">
+            <function read="/" write="/" move="right"/>
+        </transition>
+        <transition from="9" to="9" x="-5196" y="-5315">
+            <function read="1" write="1" move="right"/>
+            <function read="0" write="0" move="right"/>
+        </transition>
+    </state-transitions>
+</turing-machine>

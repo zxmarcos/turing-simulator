@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<turing-machine>
+    <comment><![CDATA[Máquina de Turing para a Soma Emocionante:
+Aceita uma entra em binário do tipo (0|1)^x+(0|1)^y
+E retorna a soma.
+
+O algoritmo é, considerando A e B os dois números a serem somados:
+Se B = 0 Então: Pare;
+Senão: B--; A++
+Volte ao primeiro passo.
+
+
+Algoritmo para incrementar um número:
+1 - Quando estiver no começo a esquerda da fita, ande para direita até o fim do número.
+2 - Comece a andar para a esquerda, e troque todos os 1 por 0
+3 - No primeiro 0 mude, troque por 1
+4 - Pare.
+
+Algoritmo para decrementar um número:
+1 - Quando estiver no começo da fita a esquerda,
+       faça  o complementa 1 (troque todos os 0 por 1 e vice versa).
+2 - Incremente 1 a esse número (utilizando o algoritmo anterior)
+3 - Faça o complementa 1 novamente.]]></comment>
+    <machine-states>
+        <state id="12" name="12" x="-4564.23" y="-4692.47" type="normal"/>
+        <state id="11" name="9" x="-4041.9" y="-4851" type="normal"/>
+        <state id="5" name="8" x="-4210.95" y="-4848.7" type="normal"/>
+        <state id="8" name="3" x="-4732.52" y="-5097.74" type="normal">
+            <comment><![CDATA[Se encontramos o simbolo positivo,
+então nosso número é 0 e a adição foi completada. 
+Zeiramos a fita para deixar apenas o resultado.]]></comment>
+        </state>
+        <state id="7" name="13" x="-4853.73" y="-4693.4" type="normal"/>
+        <state id="6" name="2" x="-4860" y="-4937" type="normal">
+            <comment><![CDATA[Nesse estado verificaremos se o segundo numero é 0.]]></comment>
+        </state>
+        <state id="3" name="11" x="-4385" y="-4688.02" type="normal"/>
+        <state id="2" name="5" x="-4678" y="-4939" type="normal">
+            <comment><![CDATA[Voltamos até o fim da fita novamente]]></comment>
+        </state>
+        <state id="1" name="7" x="-4377.52" y="-4848.85" type="normal"/>
+        <state id="0" name="14" x="-4561.89" y="-5101.64" type="final"/>
+        <state id="9" name="6" x="-4545.28" y="-4851.66" type="normal">
+            <comment><![CDATA[A partir daqui subtrairemos 1 do segundo numero.
+Através do método do complementa 2.]]></comment>
+        </state>
+        <state id="4" name="10" x="-4198.65" y="-4692.76" type="normal"/>
+        <state id="10" name="1" x="-5043" y="-4934" type="initial">
+            <comment><![CDATA[Primeiros vamos chegar ao fim da fita.]]></comment>
+        </state>
+    </machine-states>
+    <state-transitions>
+        <transition from="8" to="0" x="-4624.3" y="-5070.87">
+            <function read="#" write="#" move="left"/>
+        </transition>
+        <transition from="8" to="8" x="-4708.17" y="-5197.74">
+            <function read="0" write="#" move="right"/>
+            <function read="1" write="#" move="right"/>
+        </transition>
+        <transition from="11" to="4" x="-4093.88" y="-4740.14">
+            <function read="#" write="#" move="left"/>
+        </transition>
+        <transition from="11" to="11" x="-4016.6" y="-4947.55">
+            <function read="1" write="0" move="right"/>
+            <function read="0" write="1" move="right"/>
+        </transition>
+        <transition from="5" to="11" x="-4102.27" y="-4818.8">
+            <function read="+" write="+" move="right"/>
+        </transition>
+        <transition from="5" to="5" x="-4182.2" y="-4946.4">
+            <function read="1" write="1" move="left"/>
+            <function read="0" write="0" move="left"/>
+        </transition>
+        <transition from="1" to="5" x="-4274.11" y="-4818.8">
+            <function read="0" write="1" move="left"/>
+        </transition>
+        <transition from="1" to="1" x="-4349.92" y="-4947.7">
+            <function read="1" write="0" move="left"/>
+        </transition>
+        <transition from="9" to="1" x="-4432.17" y="-4819.57">
+            <function read="#" write="#" move="left"/>
+        </transition>
+        <transition from="9" to="9" x="-4512.61" y="-4945.65">
+            <function read="1" write="0" move="right"/>
+            <function read="0" write="1" move="right"/>
+        </transition>
+        <transition from="2" to="9" x="-4587.04" y="-4865.65">
+            <function read="+" write="+" move="right"/>
+        </transition>
+        <transition from="10" to="10" x="-5016" y="-5034">
+            <function read="1" write="1" move="right"/>
+            <function read="0" write="0" move="right"/>
+            <function read="+" write="+" move="right"/>
+        </transition>
+        <transition from="10" to="6" x="-4935.5" y="-4906">
+            <function read="#" write="#" move="left"/>
+        </transition>
+        <transition from="6" to="6" x="-4835" y="-5039">
+            <function read="0" write="0" move="left"/>
+        </transition>
+        <transition from="6" to="8" x="-4777.87" y="-4976.35">
+            <function read="+" write="#" move="right"/>
+        </transition>
+        <transition from="6" to="2" x="-4739" y="-4909">
+            <function read="1" write="1" move="right"/>
+        </transition>
+        <transition from="2" to="2" x="-4651" y="-5031">
+            <function read="0" write="0" move="left"/>
+            <function read="1" write="1" move="left"/>
+            <function read="#" write="#" move="left"/>
+        </transition>
+        <transition from="4" to="4" x="-4178" y="-4779.82">
+            <function read="0" write="0" move="left"/>
+            <function read="1" write="1" move="left"/>
+            <function read="+" write="+" move="left"/>
+        </transition>
+        <transition from="4" to="3" x="-4243.31" y="-4661.16">
+            <function read="#" write="#" move="right"/>
+        </transition>
+        <transition from="3" to="12" x="-4415.31" y="-4659.24">
+            <function read="+" write="+" move="left"/>
+        </transition>
+        <transition from="3" to="3" x="-4342.51" y="-4799.6">
+            <function read="1" write="1" move="right"/>
+            <function read="0" write="0" move="right"/>
+        </transition>
+        <transition from="12" to="12" x="-4537.38" y="-4795.64">
+            <function read="1" write="0" move="left"/>
+        </transition>
+        <transition from="12" to="7" x="-4671.63" y="-4662.19">
+            <function read="0" write="1" move="left"/>
+            <function read="#" write="1" move="left"/>
+        </transition>
+        <transition from="7" to="10" x="-4918.69" y="-4790.65">
+            <function read="#" write="#" move="right"/>
+        </transition>
+        <transition from="7" to="7" x="-4803.48" y="-4802.52">
+            <function read="1" write="1" move="left"/>
+            <function read="0" write="0" move="left"/>
+        </transition>
+    </state-transitions>
+</turing-machine>

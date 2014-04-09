@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<turing-machine>
+    <machine-states>
+        <state id="2" name="2" x="-4912" y="-5040" type="normal"/>
+        <state id="3" name="1" x="-5095" y="-5039" type="normal"/>
+        <state id="4" name="0" x="-5276" y="-5038" type="initial"/>
+        <state id="0" name="4" x="-4510" y="-5050" type="final"/>
+        <state id="1" name="3" x="-4709" y="-5045" type="normal"/>
+    </machine-states>
+    <state-transitions>
+        <transition from="1" to="0" x="-4618.5" y="-5016">
+            <function read="#" write="#" move="right"/>
+        </transition>
+        <transition from="1" to="1" x="-4681" y="-5139">
+            <function read="0" write="1" move="right"/>
+            <function read="1" write="0" move="right"/>
+        </transition>
+        <transition from="2" to="1" x="-4790" y="-5012">
+            <function read="#" write="#" move="right"/>
+        </transition>
+        <transition from="2" to="2" x="-4904" y="-5142">
+            <function read="0" write="0" move="left"/>
+            <function read="1" write="1" move="left"/>
+        </transition>
+        <transition from="3" to="2" x="-4983" y="-5011">
+            <function read="0" write="1" move="left"/>
+        </transition>
+        <transition from="3" to="3" x="-5073" y="-5135">
+            <function read="1" write="0" move="left"/>
+        </transition>
+        <transition from="4" to="3" x="-5150" y="-5008">
+            <function read="#" write="#" move="left"/>
+        </transition>
+        <transition from="4" to="4" x="-5245" y="-5130">
+            <function read="0" write="1" move="right"/>
+            <function read="1" write="0" move="right"/>
+        </transition>
+    </state-transitions>
+</turing-machine>
